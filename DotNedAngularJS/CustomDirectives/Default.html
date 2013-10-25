@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom directives</title>
+</head>
+<body ng-app="myApp">
+
+    <!--<div ng-controller="peopleCtrl as ctrl">
+        <div>
+            First name: <input type="text" ng-model="person.firstName" data-my-focus />
+        </div>
+        <div>
+            Last name: <input type="text" ng-model="person.lastName" data-my-focus />
+        </div>
+        <button ng-click="ctrl.save()">Save</button>
+    </div>-->
+
+
+    <div ng-controller="peopleCtrl as ctrl">
+        <person-editor the-person="person"></person-editor>
+        <button ng-click="ctrl.save()">Save</button>
+    </div>
+
+    <script src="/Scripts/angular.js"></script>
+    <script src="App/App.js"></script>
+</body>
+</html>

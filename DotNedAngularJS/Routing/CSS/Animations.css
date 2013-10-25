@@ -1,0 +1,19 @@
+﻿.reveal-animation.ng-enter {
+    -moz-transition: 0.333s ease-in-out all;
+    -o-transition: 0.333s ease-in-out all;
+    -webkit-transition: 0.333s ease-in-out all;
+    transition: 0.333s ease-in-out all;
+    opacity: 0;
+}
+
+    .reveal-animation.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+li span {
+    cursor: pointer;
+}
+
+    li span:hover {
+        background-color: rgb(200, 200, 200);
+    }

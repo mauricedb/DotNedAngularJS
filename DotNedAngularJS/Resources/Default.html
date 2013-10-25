@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>$Resource</title>
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="peopleCtrl as ctrl">
+
+        <ul>
+            <li ng-repeat="p in people">
+                <span ng-click="ctrl.select(p)">{{p.firstName}} {{p.lastName}}</span>
+            </li>
+        </ul>
+
+        <div ng-show="currentPerson">
+            <div>
+                First name: <input type="text" ng-model="currentPerson.firstName" />
+            </div>
+            <div>
+                Last name: <input type="text" ng-model="currentPerson.lastName" />
+            </div>
+            <button ng-click="ctrl.save()">Save</button>
+        </div>
+    </div>
+    
+    <script src="/Scripts/angular.js"></script>
+    <script src="/Scripts/angular-resource.js"></script>
+    <script src="App/App.js"></script>
+</body>
+</html>

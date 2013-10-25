@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Basics</title>
+</head>
+<body data-ng-app data-ng-controller="MyCtrl">
+
+
+    <input type="text" ng-model="model.firstName" />
+    <input type="text" ng-model="model.lastName" />
+    <br/>
+    {{model.firstName}} {{model.lastName}}
+    <br />
+    {{model.time}}
+
+    <script>
+
+        var model = {
+            firstName: "Maurice",
+            lastName: "de Bijer",
+            time:""
+        };
+
+
+        function MyCtrl($scope) {
+            $scope.model = model;
+
+            setInterval(function () {
+                $scope.$apply(function() {
+                    model.time = new Date().toLocaleTimeString();
+                });
+            }, 1000);
+        }
+    </script>
+    <script src="Scripts/angular.js"></script>
+</body>
+</html>
